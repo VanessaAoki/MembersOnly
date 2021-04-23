@@ -1,15 +1,17 @@
 <div class="column is-half">
-  <article class="media box">
+  <% if user_signed_in? %>
+	<article class="media box">
 		<figure class="media-left">
 			<p class="image is-64x64">
 				<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
 			</p>
 		</figure>
 		<div class="media-content">
-			 <%= render 'post/form' %>
+			 <%= render 'posts/form' %>
 		</div>
 	</article>
-</div>
+  <% end %>
+
 
 <% @posts.each do | post | %>
   <div class="box">
@@ -25,7 +27,7 @@
   				<small><%= post.user.username %></small><br/>
   				<p><%= post.post %></p>
   			</div>
-      <% if user_signed_in? && current_user.id == post.user_id %>
+        <% if user_signed_in? && current_user.id == post.user_id %>
   			<nav class="level">
   				<div class="level-left is-mobile">
   					<%= link_to post, class: "level-item" do %>
@@ -42,4 +44,6 @@
         <% end %>
   		</div>
   	</article>
+  </div>
 <% end %>
+</div>
