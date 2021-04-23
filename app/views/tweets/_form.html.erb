@@ -1,22 +1,11 @@
-<%= form_with(model: tweet) do |form| %>
-  <% if tweet.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(tweet.errors.count, "error") %> prohibited this tweet from being saved:</h2>
-
-      <ul>
-        <% tweet.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :tweet %>
-    <%= form.text_area :tweet %>
+<%= simple_form_for(@tweet) do |f|%>
+<%= f.error_notification%>
+<div class="field">
+  <div class="control">
+    <%= f.input :tweet, label: "Tweet about it", input_html: { class: "textarea"}, wrapper: false, label_html: {class:"label"}, placeholder: "Compose a new tweet.." %>
   </div>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<%= f.button  :submit, class: "button is-info"%>
+
+<%end%>
