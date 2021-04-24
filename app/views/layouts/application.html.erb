@@ -38,7 +38,7 @@
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <%= link_to 'New Post', root_path, class: "button is-info is-inverted" %>
+                <%= link_to 'New Post', new_post_url, class: "button is-info is-inverted" %>
               </p>
               <% if user_signed_in? %>
                 <p class="control">
