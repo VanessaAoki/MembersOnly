@@ -32,3 +32,8 @@
 .notification:not(:last-child) {
 	margin-bottom: 0;
 }
+
+.error_notification {
+  color: red;
+  font-weight: 400;
+}
