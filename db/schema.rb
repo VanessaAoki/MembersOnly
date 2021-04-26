@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 2021_04_26_133407) do
     t.index ["post"], name: "index_posts_on_post", unique: true
   end
 
+  create_table "tweets", force: :cascade do |t|
+    t.text "tweet"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
