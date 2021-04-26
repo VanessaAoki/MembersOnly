@@ -29,15 +29,21 @@
         <% if user_signed_in? && current_user.id == post.user_id %>
   			<nav class="level">
   				<div class="level-left is-mobile">
+						
   					<%= link_to post, class: "level-item" do %>
   					  <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
   					<% end %>
+
   					<%= link_to edit_post_path(post), class: "level-item" do %>
   					  <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
   					<% end %>
-  					<%= button_to post, method: :delete, data: { confirm: "Are you sure you want to delete this post?" } do %>
+
+  					<%= form_tag post, method: :delete do %>
+  						<%= button_tag class: "no-button", data: { confirm: "Are you sure you want to delete this post?" } do %>
   							<span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+  						<% end %>
   					<% end %>
+
   				</div>
   			</nav>
         <% end %>
