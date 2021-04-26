@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
-
-
-<div class="columns">
-  <div class="column is-three-quarters">
-  <strong>Post:</strong>
-  <%= @post.post %>
-  </div>
-  <div class="column">
-  <%= link_to 'Edit', edit_post_path(@post),:class => "button is-warning"  %> 
-  </div>
-  <div class="column">
-  <%= link_to 'Back', posts_path, :class => "button is-primary"%>
-  </div>
+<div class="section">
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-half">
+				<h1 class="title">This is your secret:</h1>
+				<div class="box">
+          <%= @post.post %>
+        </div>
+        <div class="field is-grouped is-3">
+          <%= link_to 'Edit', edit_post_path(@post),:class => "button is-warning is-outlined mr-4"  %> 
+          <%= link_to 'Back', posts_path, :class => "button is-primary is-outlined"%>
+        </div>
+			</div>
+		</div>
+	</div>
 </div>
-
-
-
