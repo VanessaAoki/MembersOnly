@@ -23,7 +23,6 @@
   		</div>
   		<div class="media-content">
   			<div class="content">
-  				<small><%= post.user.username %></small><br/>
   				<p><%= post.post %></p>
   			</div>
         <% if user_signed_in? && current_user.id == post.user_id %>
