@@ -1,9 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+
+<div class="columns">
+  <div class="column is-three-quarters">
   <strong>Post:</strong>
   <%= @post.post %>
-</p>
+  </div>
+  <div class="column">
+  <%= link_to 'Edit', edit_post_path(@post),:class => "button is-warning"  %> 
+  </div>
+  <div class="column">
+  <%= link_to 'Back', posts_path, :class => "button is-primary"%>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+
+

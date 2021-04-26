@@ -43,4 +43,10 @@
 .no-button {
   background-color: inherit;
   border: none;
+  cursor: pointer;
+  color: blue;
+}
+
+.no-button:hover {
+  color: #000;
 }
