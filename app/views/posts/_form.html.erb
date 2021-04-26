@@ -5,6 +5,6 @@
       <%= f.input :post, label: "Your secret is safe here", input_html: { class: "textarea "}, wrapper: false, label_html: {class: "label"}, placeholder: "Write your secret...", autofocus: true %>
     </div>
   </div>
-<%= f.error_notification %>
+<%= f.error_notification message: 'Please, fullfil all the requirements' %>
 <%= f.button :submit, class: "button is-info" %>
 <% end %>

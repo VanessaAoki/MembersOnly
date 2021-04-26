@@ -3,7 +3,7 @@
 	<article class="media box">
 		<figure class="media-left">
 			<p class="image is-64x64">
-				<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+				<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.email) %>
 			</p>
 		</figure>
 		<div class="media-content">
@@ -18,12 +18,11 @@
   	<article class="media">
   		<div class="media-left">
   			<figure class="image is-64x64">
-  				<%= gravatar_image_tag(post.user.email, size: 64, alt: post.user.name) %>
+  				<%= gravatar_image_tag(post.user.email, size: 64, alt: post.user.email) %>
   			</figure>
   		</div>
   		<div class="media-content">
   			<div class="content">
-  				<strong><%= post.user.name %></strong><br />
   				<small><%= post.user.username %></small><br/>
   				<p><%= post.post %></p>
   			</div>
@@ -36,7 +35,7 @@
   					<%= link_to edit_post_path(post), class: "level-item" do %>
   					  <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
   					<% end %>
-  					<%= link_to post, method: :delete, data: { confirm: "Are you sure you want to delete this post?" } do %>
+  					<%= button_to post, method: :delete, data: { confirm: "Are you sure you want to delete this post?" } do %>
   							<span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
   					<% end %>
   				</div>
