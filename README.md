@@ -13,9 +13,8 @@
 # Members Only
 This is an app, created with Ruby on Rails, developed for you to share and read anonymous secrets!
 > As the title suggests, this is meant to be used by members only, so be sure to sign up!
-
-![](./app/assets/images/img1.png)
-
+<!-- 
+![]() -->
 
 **What can you do with this project?**
 - You can sign up, and if you created an account already, just sign in;
@@ -30,8 +29,8 @@ This is an app, created with Ruby on Rails, developed for you to share and read 
 - Ruby gems: devise, bulma, simple-forms, sqlite3, puma, sass-rails, webpacker, turbolinks, jbuilder, rubocop;
 - Visual Studio, Git & GitHub;
 
-## Live Server Link
-[Live demo link](https://micro-reddit-1.herokuapp.com/)
+<!-- ## Live Server Link
+[Live demo link](https://micro-reddit-1.herokuapp.com/) -->
 
 ## Prerequisites
 To run this project, you need a computer with Ruby and Ruby on Rails installed.
@@ -57,9 +56,9 @@ git@github.com:VanessaAoki/MembersOnly.git
 
 5. Type `$ cd bin` to move to the bin folder, *you must be on this folder to execute the file*;
 
-6. Execute `$ rails server` on the terminal and run `http://localhost:3000` on your browser *(Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari etc.)*;
+6. Execute `$ rails server` on the terminal and run `http://localhost:3000` on your browser *(Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari, etc.)*;
 
-7. Explore the app, sign up - or sign in if you are already an user - share and read secrets;
+7. Explore the app, sign up - or sign in if you are already a user - share and read secrets;
 
 8. After you are done, stop running the server by clicking `ctrl + C` on your terminal.
 
