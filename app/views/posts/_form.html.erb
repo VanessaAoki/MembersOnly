@@ -5,6 +5,11 @@
       <%= f.input :post, label: "Your secret is safe here", input_html: { class: "textarea "}, wrapper: false, label_html: {class: "label"}, placeholder: "Write your secret...", autofocus: true %>
     </div>
   </div>
-<%= f.error_notification message: 'Please, fullfil all the requirements' %>
-<%= f.button :submit, class: "button is-info is-outlined" %>
+  
+  <%= f.error_notification message: 'Please, fullfil all the requirements' %>
+  <% if user_signed_in? %>
+    <%= f.button :submit, class: "button is-info is-outlined" %>
+  <% else %>
+    <button class="button is-danger" title="Disabled button" disabled>You must be loged in to post</button>
+  <% end %>
 <% end %>

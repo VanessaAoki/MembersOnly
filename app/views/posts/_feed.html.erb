@@ -1,16 +1,9 @@
 <div class="column is-half">
-  <% if user_signed_in? %>
 	<article class="media box">
-		<figure class="media-left">
-			<p class="image is-64x64">
-				<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.email) %>
-			</p>
-		</figure>
 		<div class="media-content">
 			 <%= render 'posts/form' %>
 		</div>
 	</article>
-  <% end %>
 
 
 <% @posts.each do | post | %>
