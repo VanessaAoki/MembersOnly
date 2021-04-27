@@ -29,8 +29,8 @@ This is an app, created with Ruby on Rails, developed for you to share and read 
 - Ruby gems: devise, bulma, simple-forms, sqlite3, puma, sass-rails, webpacker, turbolinks, jbuilder, rubocop;
 - Visual Studio, Git & GitHub;
 
-<!-- ## Live Server Link
-[Live demo link](https://micro-reddit-1.herokuapp.com/) -->
+## Live Server Link
+[Live demo link](https://members-only-auth.herokuapp.com/)
 
 ## Prerequisites
 To run this project, you need a computer with Ruby and Ruby on Rails installed.
