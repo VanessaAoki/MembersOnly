@@ -5,19 +5,25 @@
 		</div>
 	</article>
 
-
 <% @posts.each do | post | %>
   <div class="box">
   	<article class="media">
-  		<div class="media-left">
-  			<figure class="image is-64x64">
-  				<%= gravatar_image_tag(post.user.email, size: 64, alt: post.user.email) %>
-  			</figure>
-  		</div>
   		<div class="media-content">
   			<div class="content">
-  				<p><%= post.post %></p>
-  			</div>
+			   <% if user_signed_in? %>
+			   <div class="media-left is-flex">
+				<figure class="image is-64x64">
+					<%= gravatar_image_tag(post.user.email, size: 64, alt: post.user.email) %>
+				</figure>
+				<strong><%= post.user.username %></strong><br/>
+				</div>
+				<p><%= post.post %></p>
+               <% else %>
+				<strong>Log in to see the author's name</strong>
+				<p><%= post.post %></p>
+				<% end %>
+				<p>Posted on: <%= post.created_at.strftime("%d-%m-%Y (%A)") %> </p>		
+				</div>
         <% if user_signed_in? && current_user.id == post.user_id %>
   			<nav class="level">
   				<div class="level-left is-mobile">
