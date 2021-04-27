@@ -13,8 +13,11 @@
 # Members Only
 This is an app, created with Ruby on Rails, developed for you to share and read anonymous secrets!
 > As the title suggests, this is meant to be used by members only, so be sure to sign up!
-<!-- 
-![]() -->
+
+![screenshot](./app/assets/images/screenshot3.png)
+![screenshot](./app/assets/images/screenshot2.png)
+![screenshot](./app/assets/images/screenshot4.png)
+![screenshot](./app/assets/images/screenshot1.png)
 
 **What can you do with this project?**
 - You can sign up, and if you created an account already, just sign in;
@@ -29,8 +32,8 @@ This is an app, created with Ruby on Rails, developed for you to share and read 
 - Ruby gems: devise, bulma, simple-forms, sqlite3, puma, sass-rails, webpacker, turbolinks, jbuilder, rubocop;
 - Visual Studio, Git & GitHub;
 
-<!-- ## Live Server Link
-[Live demo link](https://micro-reddit-1.herokuapp.com/) -->
+## Live Server Link
+[Live demo link](https://members-only-auth.herokuapp.com/)
 
 ## Prerequisites
 To run this project, you need a computer with Ruby and Ruby on Rails installed.

@@ -48,8 +48,8 @@
       <% end %>
 
         <hr />
-        <h3 class="title is-5">Cancel my account</h3>
-        <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+        <h3 class="title is-5 ml-4">Unhappy?</h3>
+        <p> <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "no-button button is-danger is-outlined" %></p>
    
       </div>
     </div>
