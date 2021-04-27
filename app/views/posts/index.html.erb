@@ -3,12 +3,9 @@
     <div class="columns">
     	<% if user_signed_in? %>
     		<%= render 'profile' %>
-    	<% else %>
-       <%= render 'trends' %>
       <% end %>
 
        <%= render 'feed' %>
-       
     </div>
   </div>
 </section>

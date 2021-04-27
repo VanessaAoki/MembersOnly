@@ -1,15 +1,12 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
-  before_action :authenticate_user!, expect: %i[index show]
+  before_action :authenticate_user!, only: %i[new edit update destroy]
 
   # GET /posts or /posts.json
   def index
     @posts = Post.all.order('created_at DESC')
     @post = Post.new
   end
-
-  # GET /posts/1 or /posts/1.json
-  def show; end
 
   # GET /posts/new
   def new
