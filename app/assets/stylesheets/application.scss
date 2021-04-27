@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bulma";
+
+.navbar-brand .title {
+  color: white;
+}
+
+// Round images
+
+.image {
+  border-radius: 50%;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.error_notification {
+  color: red;
+  font-weight: 600;
+  margin: 0 0 15px 10px;
+}
+
+.no-button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  color: rgb(197, 61, 61);
+  font-size: 16px;
+}
+
+.fa-pencil {
+  color: rgb(179, 177, 68);
+}
+
+.fa-link {
+  color: rgb(114, 126, 138);
+}
+
+.no-button:hover,
+.fa-pencil:hover,
+.fa-link:hover {
+  color: rgb(51, 51, 51);
+}

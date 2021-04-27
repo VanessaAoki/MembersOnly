@@ -1,0 +1,21 @@
+<div class="section">
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-half">
+				<h1 class="title">Editing secret</h1>
+				<%= render 'form', post: @post %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<nav class="navbar is-fixed-bottom">
+	<div class="navbar-menu">
+		<div class="navbar-item">
+			<div class="field is-grouped">
+				<p class="control">
+					<%= link_to 'Cancel', posts_path, class: "button is-dark" %>
+				</p>
+		</div>
+	</div>
+</nav>
